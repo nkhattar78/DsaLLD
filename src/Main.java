@@ -8,8 +8,9 @@ public class Main {
         StackFunctions stackFunctions = new StackFunctions();
         SortSearchFunctions sortSearchFunctions = new SortSearchFunctions();
 
-        testRecursionFunctions();
+        System.out.println(stringFunctions.countSubStringsOfDistinctChars("aaa", 1));
 
+        //testRecursionFunctions();
 
     }
 

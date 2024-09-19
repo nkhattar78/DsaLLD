@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 public class StringFunctions {
     String str;
@@ -182,6 +179,34 @@ public class StringFunctions {
         }
 
         System.out.println("For input string "+ str + ", result string after removing consecutive characters is: " + resultString);
+    }
+
+    int countSubStringsOfDistinctChars(String str, int k) {
+        boolean[] frequencyArray = new boolean[26];
+        int distinctChars = 0;
+        String substr = "";
+        HashSet<String> subStringsSet = new HashSet<>();
+
+        for (int i=0;i<str.length(); i++) {
+            Arrays.fill(frequencyArray, false);
+            distinctChars = 0;
+            substr = "";
+            for (int j = i; j<str.length(); j++) {
+                char currentChar = str.charAt(j);
+                substr = substr + currentChar;
+                if (!frequencyArray[currentChar - 'a']) {
+                    distinctChars ++;
+                    frequencyArray[currentChar -'a'] = true;
+                }
+                if (distinctChars ==k){
+                    subStringsSet.add(substr);
+                } else if (distinctChars >k) {
+                    break;
+                }
+            }
+        }
+        System.out.println(subStringsSet);
+        return subStringsSet.size();
     }
 }
 
