@@ -8,7 +8,11 @@ public class Main {
         StackFunctions stackFunctions = new StackFunctions();
         SortSearchFunctions sortSearchFunctions = new SortSearchFunctions();
 
-        System.out.println(stringFunctions.countSubStringsOfDistinctChars("aaa", 1));
+        //System.out.println(stringFunctions.countSubStringsOfDistinctChars("aaa", 1));
+//        int[] arr = {1,1,1, 2,3,3,4,4};
+//        System.out.println(new ArraysFunctions().removeDuplicatesFromSortedArray(arr));
+//        ArraysFunctions.printArray(arr);
+        stringFunctions.partitionLabels("aeccbeby");
 
         //testRecursionFunctions();
 

@@ -208,5 +208,66 @@ public class StringFunctions {
         System.out.println(subStringsSet);
         return subStringsSet.size();
     }
+
+    static int[] frequencyArrayForString(String str) {
+        int [] frequencyArray = new int[26];
+        for (int i =0;i<str.length();i++){
+            char ch = str.charAt(i);
+            frequencyArray[ch  - 'a']++;
+        }
+        return frequencyArray;
+    }
+
+    static int[] frequencyArrayForNumber(int num) {
+        int [] frequencyArray = new int[10];
+        while (num >0) {
+            int mod = num%10;
+            frequencyArray[mod]++;
+            num = num /10;
+        }
+        return frequencyArray;
+    }
+
+    static boolean[] seenArrayForString(String str) {
+        boolean [] frequencyArray = new boolean[26];
+        for (int i =0;i<str.length();i++){
+            char ch = str.charAt(i);
+            frequencyArray[ch  - 'a'] = true;
+        }
+        return frequencyArray;
+    }
+
+    static boolean[] seenArrayForNumber(int num) {
+        boolean [] frequencyArray = new boolean[10];
+        while (num >0) {
+            int mod = num%10;
+            frequencyArray[mod] = true;
+            num = num /10;
+        }
+        return frequencyArray;
+    }
+
+    /**
+     * @Category 2-pointer
+     * 	• Problem: Given a string, partition it into as many parts as possible so that each letter appears in at most one part, and return the length of each part.
+     * 	• Approach:
+     * 		○ Create a frequency array which will store the last index of the character instead of number of chars.
+     * 		○ Use two pointers: one (i) for the current position and the other (j) to track the farthest last occurrence of characters in the current segment.
+     */
+    void partitionLabels(String str) {
+        int [] lastIndexArr = ArraysFunctions.getCharLastIndexArray(str);
+        String subStr = "";
+        int moveTillIndex =0;
+
+        for (int i=0;i<str.length();i++) {
+            char ch = str.charAt(i);
+            moveTillIndex = Math.max(moveTillIndex, lastIndexArr[ch - 'a']);
+            subStr = subStr + ch;
+            if (i == moveTillIndex) {
+                System.out.println(subStr);
+                subStr  = "";
+            }
+        }
+    }
 }
 
