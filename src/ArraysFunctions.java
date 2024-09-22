@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class ArraysFunctions {
     void maxSubArray(){
 
@@ -114,6 +116,9 @@ public class ArraysFunctions {
         return  isElementPresent;
     }
 
+    /**
+     * @Category BinarySearch
+     */
     void searchInRotatedSortedArray() {
         /*
         As the array is rotated, we can clearly notice that for every index, one of the 2 halves will always be sorted.
@@ -275,6 +280,10 @@ public class ArraysFunctions {
 
 
 
+    /*
+    This function creates a frequency array type array but will store the last index of that element instead of frequency
+    This is used in Partition label function
+     */
     static int[] getCharLastIndexArray(String str) {
         int[] charIndexArray = new int[26];
 
@@ -285,4 +294,212 @@ public class ArraysFunctions {
 
         return charIndexArray;
     }
+
+    /**
+     * @Category BinarySearch
+     */
+    int findFirstOccurrenceInSortedArrayWithDuplicates(int[] arr, int element) {
+        int index = -1;
+        int first = 0, last = arr.length-1, mid = (first + last)/2;
+        while (first <= last) {
+            if (element == arr[mid] && (mid == 0 || arr[mid-1] != element)) {
+                return mid;
+            }
+
+            //@IMPORTANT!! Checking element greater than middle is must in IF check so that ELSE will have 1st half.
+            // In case middle element is same as element to find, we need to search in first half as we need to find first occurrence
+            if (element >arr [mid]) {
+                first = mid+1;
+            } else {
+                last = mid-1;
+            }
+            mid = (first + last)/2;
+        }
+        return index;
+    }
+
+    /**
+     * @Category BinarySearch
+     */
+    int findLastOccurrenceInSortedArrayWithDuplicates(int[] arr, int element) {
+        int index = -1;
+        int first = 0, last = arr.length-1, mid = (first + last)/2;
+        while (first <= last) {
+            if (element == arr[mid] && (mid == arr.length-1 || arr[mid+1] != element)) {
+                return mid;
+            }
+
+            //@IMPORTANT!! Checking element smaller than middle is must in IF check so that ELSE will have 2nd half.
+            // In case middle element is same as element to find, we need to search in 2nd half as we need to find last occurrence
+            if (element < arr [mid]) {
+                last = mid-1;
+            } else {
+                first = mid+1;
+            }
+            mid = (first + last)/2;
+        }
+        return index;
+    }
+
+    /**
+     * @Category BinarySearch
+     */
+    int numberOfOccurrenceInSortedArrayWithDuplicates(int[] arr, int element) {
+        int startIndex = findFirstOccurrenceInSortedArrayWithDuplicates(arr, element);
+        int lastIndex = findLastOccurrenceInSortedArrayWithDuplicates(arr, element);
+
+        return (lastIndex - startIndex ) +1;
+    }
+
+    /**
+     * @Category BinarySearch
+     */
+    int findSmallestElementInRotatedSortedArray(int[] arr) {
+        int result =-1;
+        int first = 0, last = arr.length-1, mid = (first + last)/2;
+
+        //@IMPORTANT!!: If we are not changing first as mid-1 and last as mid+1, then can check for less than and not required first <=last
+        while (first <last) {
+            if ((first == mid)&& (arr[first] > arr[last])) {
+                result = arr[last];
+                System.out.println("smallest element is: " + arr[last] + " whose index is "+ last);
+                return result;
+            }
+
+            // This means first half is sorted
+            //@IMPORTANT!!: Here can't do first = mid-1 or last = mid +1 because transition can be on mid index.
+            if (arr[first] < arr[mid]) {
+                first = mid;
+            } else {
+                last = mid;
+            }
+            mid = (first + last)/2;
+        }
+
+        return result;
+    }
+
+    /**
+     * @Category BinarySearch
+     */
+    int sqRoot(int number) {
+
+        if (number == 1)
+            return 1;
+
+        int start = 1, end = number/2, mid = (start + end)/2;
+
+        while (start <= end) {
+            if (mid * mid == number)
+                return mid;
+
+            if ( (number > (mid -1)* (mid -1)) && (number < (mid)* (mid)))
+                return mid-1;
+
+            if ( (number > (mid)* (mid)) && (number < (mid+1)* (mid+1)))
+                return mid;
+
+            if (number > mid * mid)
+                start = mid +1;
+            else
+                end = mid -1;
+
+            mid = (start + end)/2;
+        }
+
+        return -1;
+    }
+
+    /**
+     * @Category BinarySearch
+     */
+    boolean checkForTargetedSumInSortedArray(int[] arr, int sum) {
+        int start =0, end = arr.length-1, mid = (start + end)/2;
+
+        while (start < end) {
+            if (arr[start] + arr[end] == sum) {
+                System.out.println("Targeted sum " + sum + " found with elements as " + arr[start] + " and " + arr[end]);
+                return true;
+            }
+            if (arr[start] + arr[mid] == sum) {
+                System.out.println("Targeted sum " + sum + " found with elements as " + arr[start] + " and " + arr[mid]);
+                return true;
+            }
+            if (arr[mid] + arr[end] == sum) {
+                System.out.println("Targeted sum " + sum + " found with elements as " + arr[mid] + " and " + arr[end]);
+                return true;
+            }
+
+            if (sum < 2*arr[mid]) {
+                end = mid-1;
+            } else {
+                start =mid+1;
+            }
+            mid = (start + end)/2;
+        }
+
+        return  false;
+    }
+
+    /**
+     * @Category BinarySearch
+     */
+    int closestToGivenElementInSortedArray(int[] arr,int element) {
+        int result = -1;
+
+        int start = 0, end = arr.length -1, mid = (start +end)/2;
+        if (element < arr[0]) {
+            System.out.println("Element " + arr[0] + " is closest to given element " + element + " and is found at index " + 0);
+            return arr[0];
+        }
+
+
+        if (element > arr[end]) {
+            System.out.println("Element " + arr[end] + " is closest to given element " + element + " and is found at index " + end);
+            return arr[end];
+        }
+
+        while (start <= end) {
+             if (element == arr[mid]) {
+                 System.out.println("Element " + arr[mid] + " is closest to given element " + element + " and is found at index " + mid);
+                 return arr[mid];
+             }
+
+            //Checking if element is between mid and mid+1 index
+            if (mid !=arr.length-1) {
+                if (element>= arr[mid] && element <= arr[mid+1]) {
+                    if((element - arr[mid]) > (arr[mid+1] - element)) {
+                        System.out.println("Element " + arr[mid+1] + " is closest to given element " + element + " and is found at index " + (mid+1));
+                        return arr[mid+1];
+                    } else {
+                        System.out.println("Element " + arr[mid] + " is closest to given element " + element + " and is found at index " + mid);
+                        return arr[mid];
+                    }
+                }
+            }
+
+            if (mid != 0) {
+                //Checking if element is between mid and mid-1 index
+                if (element>= arr[mid-1] && element <= arr[mid]) {
+                    if((element - arr[mid-1]) > (arr[mid] - element)) {
+                        System.out.println("Element " + arr[mid] + " is closest to given element " + element + " and is found at index " + mid);
+                        return arr[mid];
+                    } else {
+                        System.out.println("Element " + arr[mid-1] + " is closest to given element " + element + " and is found at index " + (mid - 1));
+                        return arr[mid-1];
+                    }
+                }
+            }
+
+            if (element > arr[mid])
+                start = mid;
+            else
+                end = mid;
+
+            mid = (start + end)/2;
+        }
+
+        return result;
+    }
+
 }

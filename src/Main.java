@@ -9,10 +9,13 @@ public class Main {
         SortSearchFunctions sortSearchFunctions = new SortSearchFunctions();
 
         //System.out.println(stringFunctions.countSubStringsOfDistinctChars("aaa", 1));
-//        int[] arr = {1,1,1, 2,3,3,4,4};
-//        System.out.println(new ArraysFunctions().removeDuplicatesFromSortedArray(arr));
+        //int[] arr = {1,1,3,3,3,3,3,3,5,5,5,5};
+        int[] arr = {1,5,7,11,14,18};
+
+
+        System.out.println(new ArraysFunctions().closestToGivenElementInSortedArray(arr, 115));
 //        ArraysFunctions.printArray(arr);
-        stringFunctions.partitionLabels("aeccbeby");
+//        stringFunctions.partitionLabels("aeccbeby");
 
         //testRecursionFunctions();
 
