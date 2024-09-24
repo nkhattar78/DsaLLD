@@ -26,6 +26,7 @@ public class Main {
 
     static void testRecursionFunctions() {
         Recursion recursion = new Recursion();
+
         //recursion.printNumberInDecOrder(3);
 //        recursion.sumNumbers(1, 10, 0);
 //        System.out.println("Recursion answer: " + recursion.findFactorial(5));;

@@ -1,5 +1,3 @@
-package com.company;
-
 public class FindMinNumberOfPatchesToFixRoadWithPotholes {
     static void fn(){
         //Assume  0 represent pothole and 1 assume good segment

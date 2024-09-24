@@ -1,4 +1,4 @@
-package com.company;
+
 
 public class LexicalComparison {
     static int fn(String str1, String str2) {
