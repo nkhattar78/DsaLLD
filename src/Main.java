@@ -10,14 +10,14 @@ public class Main {
 
         //System.out.println(stringFunctions.countSubStringsOfDistinctChars("aaa", 1));
         //int[] arr = {1,1,3,3,3,3,3,3,5,5,5,5};
-        int[] arr = {1,5,7,11,14,18};
-
-
-        System.out.println(new ArraysFunctions().closestToGivenElementInSortedArray(arr, 115));
+//        int[] arr = {1,5,7,11,14,18};
+//
+//
+//        System.out.println(new ArraysFunctions().closestToGivenElementInSortedArray(arr, 115));
 //        ArraysFunctions.printArray(arr);
 //        stringFunctions.partitionLabels("aeccbeby");
 
-        //testRecursionFunctions();
+        testRecursionFunctions();
 
     }
 
@@ -34,9 +34,11 @@ public class Main {
 //        recursion.printUniqueSubSequence("acdefbbb");
 //        recursion.printStringInReverse("abcd");
 //        recursion.firstAndLastOccuOfChar("abcdba", 'b');
-//        int[] arr = {1,3,5,7,8,9,11,12,13,1,3,5,6,7};
+        int[] arr = {1,3,5,7,8,9,11,12,13,1,3,5,6,7};
 //        recursion.checkIfArrayIsStrictlySorted(arr);
-        recursion.removeAllDuplicatesChars("abcxdxefex");
+//        recursion.removeAllDuplicatesChars("abcxdxefex");
+//        System.out.println(recursion.getMaxElement(arr));
+        System.out.println(recursion.checkIfStringIsPallindrome("aa"));
 
     }
 

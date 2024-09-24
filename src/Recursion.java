@@ -251,4 +251,34 @@ public class Recursion {
         boolean[] countCheckArr = new boolean[26];
         removeAllDupesRecFn(str, 0, countCheckArr, "");
     }
+
+    private int getMaxElementRecursiveFn(int[] arr, int index, int maxElement) {
+        if (index == arr.length) {
+            return maxElement;
+        }
+        if (maxElement < arr[index]) {
+            maxElement = arr[index];
+        }
+
+        return getMaxElementRecursiveFn(arr, index +1, maxElement);
+    }
+
+    int getMaxElement(int[] arr) {
+        return getMaxElementRecursiveFn(arr, 0, 0);
+    }
+
+
+    private boolean checkPalindromeRecursiveFn(String str, int index) {
+        if (index == str.length()/2) {
+            return true;
+        }
+        if (str.charAt(index) != str.charAt(str.length()-1 - index)) {
+            return false;
+        }
+        return checkPalindromeRecursiveFn(str, index+1);
+    }
+
+    boolean checkIfStringIsPallindrome(String str) {
+        return checkPalindromeRecursiveFn(str, 0);
+    }
 }
