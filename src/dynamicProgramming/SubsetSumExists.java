@@ -1,4 +1,4 @@
-package com.company.dynamicProgramming;
+package dynamicProgramming;
 
 public class SubsetSumExists {
     final static int [] ARRAY_NUMS = {0,2,3,4};

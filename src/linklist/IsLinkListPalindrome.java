@@ -1,4 +1,4 @@
-package com.company.linklist;
+package linklist;
 
 public class IsLinkListPalindrome {
     /* Algorithm

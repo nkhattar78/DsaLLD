@@ -1,4 +1,4 @@
-package com.company.linklist;
+package linklist;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.company.dynamicProgramming;
+package dynamicProgramming;
 
 public class Knapsack01TopDown {
     static final int KNAPSACK_CAPACITY = 4;

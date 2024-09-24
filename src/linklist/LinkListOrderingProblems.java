@@ -1,4 +1,4 @@
-package com.company.linklist;
+package linklist;
 
 public class LinkListOrderingProblems {
     public static SllNode reverse(SllNode head) {

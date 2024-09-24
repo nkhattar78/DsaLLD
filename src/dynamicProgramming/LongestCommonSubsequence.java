@@ -1,4 +1,4 @@
-package com.company.dynamicProgramming;
+package dynamicProgramming;
 
 public class LongestCommonSubsequence {
     static final String STR1 = "aebcbda";

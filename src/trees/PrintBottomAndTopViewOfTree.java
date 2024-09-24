@@ -1,4 +1,4 @@
-package com.company.trees;
+package trees;
 
 import java.util.HashMap;
 import java.util.Iterator;

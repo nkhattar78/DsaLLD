@@ -1,4 +1,4 @@
-package com.company.arrays;
+package arrays;
 
 public class ArrayHelperFns {
     private static ArrayHelperFns instance = null;

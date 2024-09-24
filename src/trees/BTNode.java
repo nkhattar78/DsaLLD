@@ -1,4 +1,4 @@
-package com.company.trees;
+package trees;
 
 public class BTNode {
     public BTNode left;

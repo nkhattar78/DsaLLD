@@ -1,4 +1,4 @@
-package com.company.trees;
+package trees;
 // A class to store a binary tree node
 class Node
 {

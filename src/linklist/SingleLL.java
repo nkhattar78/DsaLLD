@@ -1,4 +1,4 @@
-package com.company.linklist;
+package linklist;
 public class SingleLL {
     SllNode head;
     SllNode tail;

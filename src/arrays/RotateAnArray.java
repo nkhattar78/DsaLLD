@@ -1,4 +1,4 @@
-package com.company.arrays;
+package arrays;
 
 public class RotateAnArray {
     public void mainFn(int[] numArray, int numberOfRotations){

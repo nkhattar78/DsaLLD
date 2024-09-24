@@ -1,4 +1,4 @@
-package com.company.arrays;
+package arrays;
 
 /*
 Start with first element and keep on adding until the current sum is less than or equal to given sum. Adding the element towards the end of the loop code.

@@ -1,4 +1,4 @@
-package com.company.arrays;
+package arrays;
 
 public class ContiguousSubArrayHavingMultipleOfGivenNum {
     static void fn() {

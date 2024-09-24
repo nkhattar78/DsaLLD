@@ -1,4 +1,4 @@
-package com.company.linklist;
+package linklist;
 
 class NodeDoublyLL {
     int data;

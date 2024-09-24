@@ -1,4 +1,4 @@
-package com.company.dynamicProgramming;
+package dynamicProgramming;
 
 /**
  * Return true if the given array can be divided into 2 sub-arrays whose diff is equal to given number

@@ -1,4 +1,4 @@
-package com.company.arrays;
+package arrays;
 
 public class BestTimeToBuyAndSellStocks {
     public void mainFn(int[] stockPriceArray) {

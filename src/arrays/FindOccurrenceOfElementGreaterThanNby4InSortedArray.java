@@ -1,4 +1,4 @@
-package com.company.arrays;
+package arrays;
 
 public class FindOccurrenceOfElementGreaterThanNby4InSortedArray {
     static void fn() {

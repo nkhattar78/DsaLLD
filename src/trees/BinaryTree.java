@@ -1,9 +1,9 @@
-package com.company.trees;
+package trees;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-import static com.company.trees.TreeHelperFunctions.heightRec;
+import static trees.TreeHelperFunctions.heightRec;
 
 public class BinaryTree {
     BTNode root;

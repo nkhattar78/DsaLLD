@@ -1,4 +1,4 @@
-package com.company.slidignwindow;
+package slidignwindow;
 
 /** Problem statement
  * For example, consider array { 0, 0, 1, 0, 1, 1, 1, 0, 1, 1 }.

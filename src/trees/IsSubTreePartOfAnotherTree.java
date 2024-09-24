@@ -1,4 +1,4 @@
-package com.company.trees;
+package trees;
 
 public class IsSubTreePartOfAnotherTree {
     public static void mainFn() {

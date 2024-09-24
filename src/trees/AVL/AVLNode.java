@@ -1,4 +1,4 @@
-package com.company.trees.AVL;
+package trees.AVL;
 
 public class AVLNode {
     int height;

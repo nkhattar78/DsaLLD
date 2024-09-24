@@ -1,4 +1,4 @@
-package com.company.trees.AVL;
+package trees.AVL;
 class IntervalTree {
     int low, high, max;
     IntervalTree left, right;

@@ -1,6 +1,6 @@
-package com.company.trees;
+package trees;
 
-import static com.company.trees.SortedArrayToBST.sortedArrayToBST;
+import static trees.SortedArrayToBST.sortedArrayToBST;
 
 
 

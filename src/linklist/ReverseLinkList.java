@@ -1,4 +1,4 @@
-package com.company.linklist;
+package linklist;
 
 public class ReverseLinkList {
     public static void mainFn() {

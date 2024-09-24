@@ -1,4 +1,4 @@
-package com.company.linklist;
+package linklist;
 
 public class MergeSortedLinksLists {
     public static void mainFn() {

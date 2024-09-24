@@ -1,4 +1,4 @@
-package com.company.trees;
+package trees;
 
 /**
  * Heap sort:

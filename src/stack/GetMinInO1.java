@@ -1,4 +1,4 @@
-package com.company.stack;
+package stack;
 
 import java.util.Stack;
 

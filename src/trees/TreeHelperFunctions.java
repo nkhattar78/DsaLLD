@@ -1,4 +1,4 @@
-package com.company.trees;
+package trees;
 
 public class TreeHelperFunctions {
     public static BTNode getBinaryTree() {

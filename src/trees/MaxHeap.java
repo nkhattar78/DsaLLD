@@ -1,4 +1,4 @@
-package com.company.trees;
+package trees;
 
 /**
  * MaxHeap is a complete binary tree in which each node is greater than it's children.

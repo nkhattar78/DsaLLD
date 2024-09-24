@@ -1,4 +1,4 @@
-package com.company.dynamicProgramming;
+package dynamicProgramming;
 
 public class SubsetSumCountMemoization {
     final static int [] ARRAY_NUMS = {1,2};

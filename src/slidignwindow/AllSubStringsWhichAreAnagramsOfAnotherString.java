@@ -1,6 +1,6 @@
-package com.company.slidignwindow;
+package slidignwindow;
 
-import com.company.strings.AreStringAnagrams;
+import strings.AreStringAnagrams;
 
 /** Problem Statement
  *Find all substrings of a string that contains all characters of another string.

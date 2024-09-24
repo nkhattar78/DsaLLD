@@ -1,4 +1,4 @@
-package com.company.slidignwindow;
+package slidignwindow;
 
 import java.util.HashMap;
 

@@ -1,4 +1,4 @@
-package com.company.trees;
+package trees;
 
 public class SortedArrayToBST {
     public static void mainFn() {

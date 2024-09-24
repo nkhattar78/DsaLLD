@@ -1,4 +1,4 @@
-package com.company.dynamicProgramming;
+package dynamicProgramming;
 
 public class NumberOfUniqueBSTs {
     public static void mainFn() {

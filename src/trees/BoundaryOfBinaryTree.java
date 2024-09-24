@@ -1,4 +1,4 @@
-package com.company.trees;
+package trees;
 
 public class BoundaryOfBinaryTree {
     public static void mainFn() {

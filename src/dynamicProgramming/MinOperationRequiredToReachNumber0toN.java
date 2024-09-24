@@ -1,4 +1,4 @@
-package com.company.dynamicProgramming;
+package dynamicProgramming;
 
 /**
  * Given an integer N, the task is to obtain N, starting from 1 using minimum number of operations. The operations that can be performed in one step are as follows:

@@ -1,4 +1,4 @@
-package com.company.linklist;
+package linklist;
 
 public class SllNode {
     int data;
